@@ -1,0 +1,196 @@
+/* Setting up some variables to use in the styles */
+
+:root {
+  /* Colors */
+
+  /* Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Typography */
+
+  /* body */
+  --paragraph: 18px
+
+  /* Font */
+  /* weights: 300 (Light), 400 (regular), 600 (SemiBold) */
+  --Ff:  'Outfit', sans-serif;
+}
+
+/* Declaring background color for the entire page */
+body {
+    background-color: var(--Very-dark-blue-main-BG);
+}
+
+/* setting up rules for main container */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* rules for the first set of text on the page */
+h1 {
+    font-family: var(--Ff);
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--White);
+    margin-top: 20px;
+}
+
+h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+
+/* rules for the <p> elements */
+p {
+    color: var(--Soft-blue);
+    font-weight: 400;
+    font-size: var(--paragraph);
+}
+
+
+/* rules for the <span> elements */
+span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--Cyan);
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+/* rules for the <strong> element */
+strong {
+    margin-left: 6px;
+    font-size: 15px;
+    font-family: var(--Ff);
+    font-weight: 300;
+    color: white;
+}
+
+strong:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+/* setting up rules for foot container */
+footer {
+    text-align: center;
+    font-size: .8rem;
+    color: white;
+}
+
+/* styling the links in the footer */
+footer a {
+    color: var(--Cyan);
+}
+
+
+/* Start of class and id styles */
+
+/* styles for the card */
+.content {
+    background-color: var(--Very-dark-blue-card-BG);
+    width: 240px;
+    min-height: 40vh;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 10px  20px rgba(0, 0, 0, .1) ;
+}
+
+/* rules for the main image on the top of the card */
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-image: url(/images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+/* style rules for the "hidden" element(s) overlayed on the product image */
+.hidden {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 247, 0.5);
+    border-radius: 8px;
+}
+
+/* rules for the behaviors of the "hidden" elements */
+.hidden:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* additonal styles for text elements */
+.text {
+    font-family: var(--Ff);
+}
+
+
+/* additional style to override rules applied to ".text" classes */
+.nc {
+    color: var(--Soft-blue);
+    margin-left: auto;
+}
+
+/* creating the divider in the card */
+.line {
+    height: .5px;
+    background-color: var(--Very-dark-blue-line);
+}
+
+/* styles for the creator section at the bottom of the card */
+.creator {
+    display: flex;
+    font-family: var(--Ff);
+    align-items: center;
+    width: 100%;
+}
+
+/* styles for the creator sections image */
+#avatar {
+    width: 6%;
+    border: solid 1px white;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+
+/* styles for the view icon svg */
+#view {
+    width: 11%;
+    height: 10%;
+}
+
+/* styles for the ethereum icon svg */
+#eth {
+    width: 8px;
+    margin-right: 5px;
+}
+
+/* styles for the clock icon svg */
+#clock {
+    width: 13px;
+    margin-right: 5px;
+}
